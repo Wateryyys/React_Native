@@ -8,8 +8,9 @@ import CustomText from './components/CustomText';
 import Counter from './components/Counter';
 import MyInput from './components/MyInput';
 import IncrementCounter from './components/IncrementCounter';
-import Form
- from './components/Form';
+import Form from './components/Form';
+import Login from './components/Login';
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -20,7 +21,8 @@ export default function App() {
       {/* <Counter/> */}
       {/* <MyInput/> */}
       {/* <IncrementCounter/> */}
-      <Form/>
+      {/* <Form/> */}
+      <Login/>
     </View>
   );
 };
