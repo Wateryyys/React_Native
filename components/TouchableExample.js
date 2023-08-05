@@ -22,11 +22,11 @@ const TouchableExample = () => {
 
       <Text>{'\n\n'}</Text>
 
-      <TouchableHighlight 
+      <TouchableOpacity 
         style = {styles.button}
         onPress = {() => {setCount(count - 1)}}>
             <Text Text>TouchableOpacity</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
       <View style = {styles.countContainer}>
         <Text style = {styles.countText}>
             {count}
@@ -57,3 +57,4 @@ const styles = StyleSheet.create({
         color: '#FF00FF'
     }
 })
+//
