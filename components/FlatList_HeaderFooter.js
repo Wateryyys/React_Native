@@ -8,58 +8,49 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 
-
-
 const FlatList_HeaderFooter = () => {
   const [dataSource, setDataSource] = useState([
-        { id: 1, title: "Button" },
-        { id: 2, title: "Card" },
-        { id: 3, title: "Input" },
-        { id: 4, title: "Avatar" },
-        { id: 5, title: "CheckBox" },
-        { id: 6, title: "Header" },
-        { id: 7, title: "Icon" },
-        { id: 8, title: "Lists" },
-        { id: 9, title: "Rating" },
-        { id: 10, title: "Pricing" },
-        { id: 11, title: "Avatar" },
-        { id: 12, title: "CheckBox" },
-        { id: 13, title: "Header" },
-        { id: 14, title: "Icon" },
-        { id: 15, title: "Lists" },
+    { id: 1, title: "Button" },
+    { id: 2, title: "Card" },
+    { id: 3, title: "Input" },
+    { id: 4, title: "Avatar" },
+    { id: 5, title: "CheckBox" },
+    { id: 6, title: "Header" },
+    { id: 7, title: "Icon" },
+    { id: 8, title: "Lists" },
+    { id: 9, title: "Rating" },
+    { id: 10, title: "Pricing" },
+    { id: 11, title: "Avatar" },
+    { id: 12, title: "CheckBox" },
+    { id: 13, title: "Header" },
+    { id: 14, title: "Icon" },
+    { id: 15, title: "Lists" },
   ]);
 
-  const EmptyListMessage = ({item}) => {
-    return(
-        <Text
-         style={styles.emptyListStyle}
-         onPress={() => getItem(item)}
-        >
-            No Data Found
-        </Text>
-    )  
-  }
+  const EmptyListMessage = ({ item }) => {
+    return (
+      <Text style={styles.emptyListStyle} onPress={() => getItem(item)}>
+        No Data Found
+      </Text>
+    );
+  };
 
-  const ListHeader = () =>{
+  const ListHeader = () => {
     //View to set in header
-    return(
-        <View style={styles.headerFooterStyle}>
-            <Text style={styles.textStyle}> 
-                React Native Components
-            </Text>
-        </View>
-    )
-  }
+    return (
+      <View style={styles.headerFooterStyle}>
+        <Text style={styles.textStyle}>React Native Components</Text>
+      </View>
+    );
+  };
 
-  const ListFooter = () =>{
-    return(
-        <View style={styles.headerFooterStyle}>
-            <Text style={styles.textStyle}> 
-                Thai-Nichi Institute of Technology
-            </Text>
-        </View>
-    )
-  }
+  const ListFooter = () => {
+    return (
+      <View style={styles.headerFooterStyle}>
+        <Text style={styles.textStyle}>Thai-Nichi Institute of Technology</Text>
+      </View>
+    );
+  };
 
   const ItemView = ({ item }) => {
     return (
@@ -67,7 +58,7 @@ const FlatList_HeaderFooter = () => {
       <View>
         <Text style={styles.itemStyle} onPress={() => getItem(item)}>
           {item.id}
-          {'.'}
+          {"."}
           {item.title.toUpperCase()}
         </Text>
       </View>
@@ -91,8 +82,6 @@ const FlatList_HeaderFooter = () => {
     //Function ofr click on item
     alert("ID : " + item.id + " Value: " + item.title);
   };
-
-  
 
   return (
     <SafeAreaView>
