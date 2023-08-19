@@ -4,6 +4,7 @@ import TouchableExample from './components/TouchableExample'
 import RecapTouchable from './components/RecapTouchable'
 import Example_UseEffect from './components/Example_UseEffect'
 import UseEffectFlatList from './components/UseEffectFlatList'
+import RandomUsersScreen from './components/RandomUsersScreen'
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       {/* <TouchableExample/> */}
       {/* <RecapTouchable/> */}
       {/* <Example_UseEffect/> */}
-      <UseEffectFlatList/>
+      {/* <UseEffectFlatList/> */}
+      <RandomUsersScreen/>
     </View>
   )
 }
