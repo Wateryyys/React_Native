@@ -2,12 +2,14 @@ import { StyleSheet,View, Text } from "react-native";
 import React from "react";
 import FlatListAPI from "./components/FlatListAPI";
 import News from "./components/News";
+import ProductScreen from "./components/ProductScreen";
 
 const App = () => {
   return (
     <View style = {styles.container}>
       {/* <FlatListAPI/> */}
-      <News/>
+      {/* <News/> */}
+      <ProductScreen/>
     </View>
   );
 };
