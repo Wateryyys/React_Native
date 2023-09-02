@@ -1,10 +1,8 @@
 StudentID: 2013110669
 StudentName: Thanadhon Tubthonglang
-DatetoStudy: 26-August-2023
-Classtopic: 1. PR Mobile Application Contest
-	    2. using Android Emulator	
-	    3. using Fetch call API in Component
-	    4. Guideline: Postman calls the API
-	    5. In-class exercise
+DatetoStudy: 2-September-2023
+Classtopic: 1. Take a questionnaire (from Aj.Lalita) as a link: https://forms.gle/ojZU31s3aUYmBDZp8
+	        2. React Navigator : Stack Navigator
+	        3. In-class exercise
 
 
