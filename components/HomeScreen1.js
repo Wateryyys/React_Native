@@ -5,19 +5,22 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const HomeScreen = ({navigation}) => {
 
+  const {itemId} = route.params;
+
   return (
     <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
       <Text>Home Screen</Text>
+      <Text>Initial param : item Id - {itemId}{'\n'}</Text>
+      <Button 
+        title='Update param'
+        onPress={() => navigation.setParams({
+          itemId: Math.floor(Math.random()*100)
+        })}
+      />
       <Text>{'\n'}</Text>
       <Button 
         title='Go to Details'
-        onPress={() => {
-          //1.avigate to the Details route with params
-          navigation.navigate('Details',{
-            itemId : 1088,
-            otherParam: 'React Native App'
-          })
-        }}
+        onPress={() => navigation.navigate('Details')}
       />
     </View>
   )

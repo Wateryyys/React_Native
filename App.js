@@ -1,42 +1,44 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
-import React from 'react'
-import {NavigationContainer} from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import HomeScreen from './components/HomeScreen'
-import DetailsScreen from './components/DetailsScreen'
+import { View, Text, Button } from "react-native";
+
+import React from "react";
+
+import { NavigationContainer } from "@react-navigation/native";
+
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import IndexScreen from "./components/screens/IndexScreen";
+
+import CreatePostScreen from "./components/screens/CreatePostScreen";
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-        initialRouteName='Home'
+      <Stack.Navigator
+        mode="model"
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#008b8b'
+            backgroundColor: "#008b8b",
           },
-          headerTintColor: '#ffff',
+
+          headerTintColor: "#ffff",
+
           headerTitleStyle: {
-            fontWeight:'bold'
-          }
+            fontWeight: "bold",
+          },
         }}
       >
-          <Stack.Screen 
-            name='Home' 
-            component={HomeScreen} 
-            options={{title: 'Overview'}}
-            initialParams={{ itemId: 42}}
-          />
-          <Stack.Screen 
-            name='Details' 
-            component={DetailsScreen}            
-          />
+        <Stack.Screen
+          name="Index"
+          component={IndexScreen}
+          options={{ title: "MainPage" }}
+        />
+
+        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
+  );
+};
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;

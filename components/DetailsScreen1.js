@@ -3,24 +3,14 @@ import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-const DetailsScreen = ({route, navigation}) => {
-
-  const{itemId, otherParam} = route.params;
-
+const DetailsScreen = ({navigation}) => {
   return (
     <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
         <Text>DetailScreen</Text>
-        <Text>itemId: {JSON.stringify(itemId)}</Text>
-        <Text>otherParam: {JSON.stringify(otherParam)}</Text>
         <Text>{'\n'}</Text>
         <Button 
             title='Go to Details... again'
-            onPress={() => 
-              navigation.push('Details',{
-                itemId: Math.floor(Math.random()*100),
-                otherParam: 'Anything you want here'
-              })
-          }
+            onPress={() => navigation.push('Details')}
         />
         <Button 
             title='Go to Home'
