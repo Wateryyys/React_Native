@@ -1,8 +1,8 @@
 StudentID: 2013110669
 StudentName: Thanadhon Tubthonglang
-DatetoStudy: 9-September-2023
-Classtopic: - React Navigator : Stack Navigator with passing parameters to routes
-	    - React Navigator : Drawer Navigator
+DatetoStudy: 16-September-2023
+Classtopic: - React Navigator : Drawer Navigator (Continue)
+	    - React Navigator : Bottom Tabs Navigator
 	    - In-class exercise
 
 
