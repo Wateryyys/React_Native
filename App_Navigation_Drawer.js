@@ -1,13 +1,11 @@
-import { StyleSheet, Text, View,} from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import React from 'react'
 import FirstPage from './components/pages/FirstPage';
 import SecondPage from './components/pages/SecondPage';
-import ThirdPage from './components/pages/ThirdPage.js'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import CustomSideBarMenu from './components/pages/CustomSideBarMenu';
 
 function Feed(){
   return(
@@ -31,9 +29,15 @@ const Drawer = createDrawerNavigator();
 function FirstScreenStack(){
   return(
     <Stack.Navigator
-    initialRouteName="FirstPage"
-    screenOptions={{headerShown:false}}
-    >
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#008b8b'
+      },
+      headerTintColor: '#ffff',
+      headerTitleStyle: {
+        fontWeight:'bold'
+      }
+    }}>
       <Stack.Screen 
             name='First' 
             component={FirstPage} 
@@ -46,8 +50,15 @@ function FirstScreenStack(){
 function SecondScreenStack(){
   return(
     <Stack.Navigator
-      initialRouteName="SecondPage"
-      screenOptions={{headerShown:false}}
+      screenOptions={{
+          headerStyle: {
+            backgroundColor: '#008b8b'
+          },
+          headerTintColor: '#ffff',
+          headerTitleStyle: {
+            fontWeight:'bold'
+          }
+        }}
     >
       <Stack.Screen 
             name='Second' 
@@ -67,7 +78,6 @@ function MyDrawer(){
           width: 240,
         },
       }}
-      drawerContent={(props) => <CustomSideBarMenu{...props}/>}
     >
       <Drawer.Screen 
         name='FirstDrawer' 
